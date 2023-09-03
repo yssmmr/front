@@ -1,13 +1,22 @@
-#container{
-   text-align: center;
-
-
-}
-
+@charset "UTF-8";
+/* 変更箇所が少なくなるように各色を変数で定義しておく */
+#container {
+  text-align: center; }
 
 .btn {
   background-color: white;
   color: black;
-  border: 2px solid black;
+  border: 1px solid k black;
   padding: 10px 40px;
-}
+  margin: 10px 40px;
+  font-weight: 800;
+  cursor: pointer;
+  /*ボタン上にカーソル合わせた時の表示*/
+  transition: all 0.3s ease;
+  /* hover時のアニメーションをかけて表示するか(0.3s) */ }
+  .btn:hover {
+    /* hover時の表示方法 */
+    background-color: black;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */

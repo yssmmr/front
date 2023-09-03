@@ -1,0 +1,29 @@
+
+$cWhite: white;
+$cBlack: black;
+/* 変更箇所が少なくなるように各色を変数で定義しておく */
+
+#container{
+   text-align: center;
+
+}
+
+.btn {
+  background-color: $cWhite;
+  color: $cBlack;
+  border: 1px solid k$cBlack;
+  padding: 10px 40px;
+  margin: 10px 40px;
+  font-weight: 800;
+  cursor: pointer;
+  /*ボタン上にカーソル合わせた時の表示*/
+  transition: all 0.3s ease;
+  /* hover時のアニメーションをかけて表示するか(0.3s) */
+
+  &:hover {
+  /* hover時の表示方法 */
+      background-color: $cBlack;
+      color: white;
+ }
+}
+
