@@ -11,7 +11,7 @@ $cBlack: black;
 .btn {
   background-color: $cWhite;
   color: $cBlack;
-  border: 1px solid k$cBlack;
+  border: 1px solid $cBlack;
   padding: 10px 40px;
   margin: 10px 40px;
   font-weight: 800;
@@ -20,10 +20,48 @@ $cBlack: black;
   transition: all 0.3s ease;
   /* hover時のアニメーションをかけて表示するか(0.3s) */
 
-  &:hover {
-  /* hover時の表示方法 */
-      background-color: $cBlack;
-      color: white;
+  &.float:hover{
+    box-shadow: 0 0 10px $cBlack;
+  }
+
+  &.filled {
+        background-color: $cBlack;
+        color: $cWhite;
+        box-shadow: 5px 5px 10px 0 $cBlack;
+
+      &:hover{
+        background-color: $cWhite;
+        box-shadow: none;
+        color: $cBlack;
+      }
+  }
+
+  &.letter-spacing:hover {
+    background-color: $cBlack;
+    letter-spacing: 3px;
+    color: $cWhite;
+  }
+
+ &.shadow:hover{
+    transform: translate(-2.5px, -2.5px);
+    box-shadow: 5px 5px 0 0 $cBlack;
  }
+
+
+ &.solid{
+    box-shadow: 2px 2px 0 0 $cBlack;
+    border-radius: 7px;
+
+      &:hover{
+         transform: translate(2px, 2px);
+         box-shadow: none;
+      }
+
+ }
+  //&:hover {
+  /* hover時の表示方法 */
+    //   background-color: $cBlack;
+    //   color: white;
+//  }
 }
 
