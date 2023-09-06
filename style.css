@@ -13,8 +13,7 @@
   cursor: pointer;
   /*ボタン上にカーソル合わせた時の表示*/
   transition: all 0.3s ease;
-  /* hover時のアニメーションをかけて表示するか(0.3s) */
-  /* hover時の表示方法 */ }
+  /* hover時のアニメーションをかけて表示するか(0.3s) */ }
   .btn.float:hover {
     box-shadow: 0 0 10px black; }
   .btn.filled {
@@ -38,5 +37,56 @@
     .btn.solid:hover {
       transform: translate(2px, 2px);
       box-shadow: none; }
+
+.rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: orangered;
+  transform: translate(50px, 50px);
+  transform: rotate(30deg);
+  transform-origin: center center; }
+
+.rect2 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: blue;
+  transform: translate(50px, 50px);
+  transform: skew(30deg);
+  transform-origin: center center; }
+
+.rect3 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: yellow;
+  transform: scale(1.1, 1.1);
+  transform-origin: center center; }
+
+#container2 {
+  position: relative;
+  background: grey; }
+
+.div-1 {
+  background: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20; }
+
+.div-2 {
+  background: blue;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 30; }
+
+.div-3 {
+  background: teal;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 40; }
 
 /*# sourceMappingURL=style.css.map */
