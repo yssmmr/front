@@ -41,6 +41,9 @@
     height: 16px;
     background: url(arrow-right.svg);
   }
+  #page {
+    color: white;
+  }
 </style>
 
   <body>
@@ -60,6 +63,7 @@
         <div class="toolbar">
           <div class="nav">
             <div id="prev"></div>
+            <div id="page"></div>
             <div id="next"></div>
           </div>
         </div>
@@ -77,22 +81,43 @@
       'use strict';
 
       const images = ['image1.jpg','image2.jpg','image3.jpg','image4.jpg',"image5.jpg"];
+      images.forEach(function(item, index) {
+        preloadImage(item)
+      });
       let current = 0;
+      // スライドショーの動作に必要な定数、変数を定義。
+      // imagesは使用する画像を配列として定義。currentは現在何枚目の画像を表示しているかを保存。
 
       function changeImage(num) {
         if(current + num >= 0 && current + num < images.length) {
           current += num;
           document.getElementById('main_image').src = images[current];
+          pageNum();
         }
       };
+
+      function preloadImage(path) {
+        let imgTag = document.createElement('img');
+        imgTag.src = path;
+      }
+      //「createElement」は（）タグ名を持つ要素を生成。メモリに保存。
+
+      function pageNum() {
+        document.getElementById('page').textContent = `${current+1}/${images.length}`;
+      }
+      // idがpageの要素にページ数を表示させる。images.lengthはimagesの項目数を表す。
+
+      pageNum();
 
       document.getElementById('prev').onclick = function() {
         changeImage(-1);
       };
+      //idがprevの要素をクリックしたら、changeImageファンクションを行い、src属性の値を変えimagesの該当インデックス番号の画像を表示。
 
       document.getElementById('next').onclick = function() {
         changeImage(1);
       };
+      //idがnextの要素をクリックしたら、changeImageファンクションを行い、src属性の値を変えimagesの該当インデックス番号の画像を表示。
 
     </script>
   </body>
