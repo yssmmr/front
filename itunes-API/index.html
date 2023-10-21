@@ -9,7 +9,17 @@
 </head>
 <body>
   <input type="text" id="inputKeyword">
-  <button onClick="onSearch()">検索</button>
+  <button onClick="onSearch(0)">検索</button>
+  <form id ="attributeForm">
+    <!--　ラジオボタンの設置  -->
+    <input type="radio" name="attribute" value="artistTerm" checked="checked">アーティスト名
+    <input type="radio" name="attribute" balue="songTerm">曲名
+  </form>
   <div id="resultContent"></div>
+  <div id="pager">
+    <button pnclick="onPrev()">←</button>
+    <span id="pageIndex"></span>
+    <button onclick="onNext()">→</button>
+  </div>
 </body>
 </html>

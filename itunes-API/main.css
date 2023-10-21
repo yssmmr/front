@@ -1,3 +1,13 @@
 .track-name {
   font-weight: bold;
 }
+
+#resultContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  width: 200px;
+  margin-bottom: 16px;
+}
